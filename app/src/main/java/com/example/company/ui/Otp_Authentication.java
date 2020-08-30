@@ -93,7 +93,8 @@ public class Otp_Authentication extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 {
-                   openactivity();
+                    Intent i=new Intent(Otp_Authentication.this,newpassword.class);
+                    startActivity(i);
                    finish();
                 }
                 else
@@ -102,9 +103,5 @@ public class Otp_Authentication extends AppCompatActivity {
                 }
             }
         });
-    }
-    private void openactivity() {
-        Intent i=new Intent(this,newpassword.class);
-        startActivity(i);
     }
 }
